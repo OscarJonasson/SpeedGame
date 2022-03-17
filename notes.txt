@@ -1,0 +1,11 @@
+-one highlight per button not twice in a row (comparing javascript if it was 1 cannot be anymore)
+
+- 1 2 1 3 4 3 2 1   no repeat
+- start / stop game
+-gets faster over time
+-stop game prompts final score
+-gameover prompt locks you out of all other functions ( you have to click close)
+-MAybe add KB support
+
+Zeus zap bolts
+

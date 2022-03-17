@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GFS Didot', serif;
+  background-image: url(http://source.unsplash.com/yqBvJJ8jGBQ);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 32px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(167, 165, 165);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column nowrap;
+  min-height: 80vh;
+  min-width: 70vw;
+  /* make linear maybe*/
+  background-image: linear-gradient(
+    180deg,
+    rgba(117, 177, 223, 0.673),
+    rgba(73, 91, 191, 0.52),
+    rgba(125, 82, 162, 0.534),
+    rgba(143, 74, 45, 0.714)
+  );
+  margin-top: 4rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px black;
+  border: 4px solid rgb(215, 174, 40);
+}
+
+/* HEADING
+*************/
+
+.speed__heading {
+  color: yellow;
+  font-size: 4rem;
+  text-shadow: 0px 6px 10px aliceblue;
+}
+
+/* GAME BUTTONS
+************/
+
+.speed__buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+.speed__button.active {
+  background-image: url(./img/zeus.jpg);
+  background-size: cover;
+  background-position: 1%;
+  filter: saturate(4);
+  box-shadow: 0px 0px 20px yellow;
+}
+
+.speed__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 7rem;
+  height: 7rem;
+  padding: 3rem;
+  background-color: rgba(117, 122, 126, 0.502);
+  border-radius: 50%;
+  border: outset 3px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 0px 7px black;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.speed__button:first-child {
+  background-color: rgb(147, 147, 0);
+}
+
+.speed__button:nth-child(2) {
+  background-color: rgb(0, 94, 0);
+}
+
+.speed__button:nth-child(3) {
+  background-color: rgb(1, 1, 176);
+}
+
+.speed__button:nth-child(4) {
+  background-color: darkorchid;
+}
+
+/* CURRENT SCORE
+****************/
+.speed__score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: aliceblue;
+}
+h3 {
+  color: yellow;
+}
+
+/* CONTROLS
+*************/
+
+.speed__controls button {
+  margin: 1rem;
+}
+
+#start {
+}
+
+#stop {
+  display: none;
+}
+
+/* Overlay
+**************/
+
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  width: 40%;
+  height: 25%;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* fix button */
+.modal button {
+  width: 4rem;
+  height: 2rem;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#result {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 400px) {
+  .speed__buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+  .modal {
+    background-color: white;
+    padding: 2rem;
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+    position: relative;
+  }
+}
